@@ -3,22 +3,19 @@
   "productName": "electron-sqlite3-app",
   "version": "1.0.0",
   "description": "My Electron application description",
-  "main": "src/index.js",
   "build": {
     "appId": "com.electron.sqlite",
-    "directories": {
-      "buildResources": "src"
-    },
-    "productName": "bot"
+    "productName": "electron.sqlite"
   },
   "homepage": "./",
+  "main": "./src/index.js",
   "scripts": {
     "start": "electron .\"",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
     "lint": "echo \"No linting configured\"",
-    "build": "yarn react-build && yarn electron-build",
+    "build": "npm run electron-build",
     "electron-build": "electron-builder"
   },
   "keywords": [],
