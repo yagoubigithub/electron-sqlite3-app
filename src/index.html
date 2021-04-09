@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+   
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <form id="addForm">
+      <input type="text" id="username" name="username" placeholder="username" />
+      <input type="password" id="password" name="password" placeholder="password" />
+      <input type="submit" value="add user"/>
+    </form>
+    <table style="width:100%">
+      <thead>
+
+        <tr>
+          <th>username</th>
+          <th>password</th>
+          <th></th>
+        </tr>
+      </thead>
+    
+      <tbody id="data-container">
+
+        <tr>
+          <td>aee</td>
+          <td>aee</td>
+          <td>
+            <button>delete</button>
+            <button>update</button>
+          </td>
+         
+        </tr>
+      </tbody>
+     
+  
+    </table>
+    <!-- Insert this line above script imports  -->
+<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+
+    <script src="./jquery.js" ></script>
+    <script src="./script.js"></script>
+
+<!-- Insert this line after script imports -->
+<script>if (window.module) module = window.module;</script>
+    
+  </body>
+</html>

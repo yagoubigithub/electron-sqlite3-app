@@ -1,0 +1,71 @@
+{
+  "name": "electron-sqlite3-app",
+  "productName": "electron-sqlite3-app",
+  "version": "1.0.0",
+  "description": "My Electron application description",
+  "main": "src/index.js",
+  "build": {
+    "appId": "com.electron.sqlite",
+    "directories": {
+      "buildResources": "src"
+    },
+    "productName": "bot"
+  },
+  "homepage": "./",
+  "scripts": {
+    "start": "electron .\"",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\"",
+    "build": "yarn react-build && yarn electron-build",
+    "electron-build": "electron-builder"
+  },
+  "keywords": [],
+  "author": {
+    "name": "yagoubigithub",
+    "email": "yagoubi.aek.2@gmail.com"
+  },
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "electron_sqlite3_app"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0",
+    "sqlite": "^3.0.6"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.54",
+    "@electron-forge/maker-deb": "^6.0.0-beta.54",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+    "@electron-forge/maker-zip": "^6.0.0-beta.54",
+    "electron": "^12.0.2",
+    "electron-builder": "^22.10.5",
+    "electron-rebuild": "^2.3.5"
+  }
+}
